@@ -86,7 +86,7 @@ class AdobeFireflyDownloader {
         if (textToImages.length === 4) {
             if (!this.init) {
                 textToImages.each(function () {
-                    const buttonEl = self.createButton("下载图片", () => {
+                    const buttonEl = self.createButton( () => {
                         const linkEl = $("<a>");
                         const timestamp = Date.now();
                         const fileName = "image" + timestamp + ".jpg";
@@ -107,7 +107,7 @@ class AdobeFireflyDownloader {
 
         if (!testEl) {
 
-            const buttonEl = this.createButton("下载图片", () => {
+            const buttonEl = this.createButton(() => {
                 const dataURL = textEffectsCanvas.toDataURL("image/png");
                 const link = $("<a>").attr({
                     "href": dataURL,
@@ -128,7 +128,7 @@ class AdobeFireflyDownloader {
             const c = $(b).find('#container clio-md-compositor-canvas')[0].shadowRoot;
             const gfCanvas = $(c).find('canvas')[0];
 
-            const buttonEl = this.createButton("下载图片", () => {
+            const buttonEl = this.createButton(() => {
                 const dataURL = gfCanvas.toDataURL("image/png");
                 const link = $("<a>").attr({
                     "href": dataURL,
