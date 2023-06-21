@@ -25,9 +25,9 @@ class AdobeFireflyDownloader {
         this.intervalId = setInterval(this.main.bind(this), 1000);
     }
 
-    createButton(text, clickHandler) {
+    createButton(clickHandler) {
+        const userLanguage = navigator.language;
         const buttonEl = $("<button class='test'>");
-        buttonEl.text(text);
         buttonEl.css({
             display: "inline-block",
             position: "absolute",
@@ -60,6 +60,12 @@ class AdobeFireflyDownloader {
                 });
             }
         );
+
+        if (userLanguage.startsWith("zh")) {
+            buttonEl.text("下载图片");
+        } else {
+            buttonEl.text("Download");
+        }
 
         buttonEl.on("click", clickHandler);
 
