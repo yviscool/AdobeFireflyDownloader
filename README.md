@@ -3,7 +3,9 @@
 This is a user script that enhances the functionality of Adobe Firefly by adding a download button to images and removing watermarks.
 
 这是一个用户脚本，通过为图片添加下载按钮并去除水印，增强了 Adobe Firefly 的功能。
-
+![generativeFill](./textToImage.png)
+![generativeFill](./textEffects.png)
+![generativeFill](./generativeFill.png)
 ### Features 功能
 
 - Adds a download button to images in Adobe Firefly.
