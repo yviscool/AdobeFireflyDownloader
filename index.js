@@ -145,6 +145,7 @@ class AdobeFireflyDownloader {
     }
 
     initializeSpBtnListener() {
+        let self = this;
         setInterval(() => {
             const sp = $('sp-button');
             if (sp) {
@@ -152,6 +153,12 @@ class AdobeFireflyDownloader {
                     sp.click(() => {
                         this.init = false;
                         $('.test').remove();
+                    });
+                    $(document).keydown(function(event) {
+                        if (event.keyCode === 13) {
+                            self.init = false;
+                            $('.test').remove();
+                        }
                     });
                 } else {
                     this.initSpBtn = true;
