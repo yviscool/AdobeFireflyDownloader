@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Adobe Firefly 下载
 // @namespace    http://tampermonkey.net/
-// @version      1.2
+// @version      1.3
 // @description  Adobe Firefly 直接提供下载按钮, 无水印
 // @license      AGPL-3.0-or-later
 // @author       Y.V
@@ -138,7 +138,7 @@ class AdobeFireflyDownloader {
                 link.remove();
             });
 
-            if (gfCanvas) {
+            if (gfCanvas && !$(generativeFill).find('.test')[0]) {
                 $(generativeFill)[0].appendChild(buttonEl.get(0));
             }
         }
